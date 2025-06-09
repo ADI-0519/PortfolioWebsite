@@ -11,6 +11,8 @@ function App() {
       <BrowserRouter>
         <Routes>
 
+          <Navbar />
+
           <Route index element={<Home />}/>
           <Route path='*' element={<NotFound />}/>
 
