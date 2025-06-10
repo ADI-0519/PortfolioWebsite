@@ -2,12 +2,14 @@ import Button from "./button"
 
 function Navbar() {
   return (
-    <div className="text-black">
+    <nav className="text-black h-full w-full flex justify-between items-center">
         <div className="">
             <Button href = "/" text = "Home" type = "normal" />
         </div>
+
+
       
-    </div>
+    </nav>
   )
 }
 
