@@ -95,7 +95,7 @@ function StarBackground() {
     
     return (
 
-    <div className='fixed inset-0 overflow-hidden pointer-events-none z-0 outline-dashed'>
+    <div className='fixed inset-0 overflow-hidden pointer-events-none z-0'>
       {stars.map((star) =>  (
 
         <div key = {star.id} className='star animate-pulse-subtle' style= {{

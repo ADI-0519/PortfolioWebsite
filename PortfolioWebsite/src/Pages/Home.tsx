@@ -1,3 +1,5 @@
+import AboutMe from "../Components/AboutMe"
+import MainPage from "../Components/MainPage"
 import Navbar from "../Components/Navbar"
 import StarBackground from "../Components/StarBackground"
 import Toggle from "../Components/toggle"
@@ -10,6 +12,10 @@ const Home = () => {
         <StarBackground />
 
         <Navbar />
+
+        <MainPage/>
+
+        <AboutMe />
 
     </div>
   )
