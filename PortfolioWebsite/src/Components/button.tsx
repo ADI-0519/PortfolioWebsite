@@ -1,27 +1,24 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-
 
 // type true => padded btn
 interface ButtonProps{
-    href: String,
+    href: string,
     type?: boolean,
-    text: String
+    text: string
 }
 
 export default function buttons({href,type,text}:ButtonProps) {
     
   
     function handleClick(){
-        if (href){
-            alert("Pushed")
-
-        }
+        
     }
 
     return (
-    <div>
-      <button className = {`${type ? "cosmic-button" : "text-foreground hover:text-primary font-bold text-xl cursor-pointer transition-all duration-300 rounded-xl" }`} onClick={handleClick}>{text}</button>
-    </div>
+      <a href={href}>
+        <div>
+          <button className = {`${type ? "cosmic-button" : "text-foreground hover:text-primary font-bold text-xl cursor-pointer transition-all duration-300 rounded-xl" }`} onClick={handleClick}>{text}</button>
+        </div>    
+      </a>
+    
   )
 }

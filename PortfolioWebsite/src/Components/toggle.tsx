@@ -39,7 +39,7 @@ function toggle() {
   return (
     <div className="text-purple">
       
-      <button onClick={handleClick} className="fixed max-sm:hidden top-5 right-5 p-2 cursor-pointer rounded-full transition-colors duration-300 focus:outline-hidden z-50 w-10 h-10 p-5">
+      <button onClick={handleClick} className="fixed max-sm:hidden top-5 right-5 cursor-pointer rounded-full transition-colors duration-300 focus:outline-hidden z-50 w-10 h-10 p-5">
         {dark ? <Sun className="text-yellow-300"/> : <Moon className="text-blue-900"/>}
 
       </button>

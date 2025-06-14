@@ -20,10 +20,10 @@ function Navbar() {
     }, [])
 
   return (
-    <nav className={`w-full transition-all duration-300 fixed z-40 ${isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"}`}>
+    <nav className={`w-full transition-all duration-300 fixed z-40 ${isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-lg" : "py-5"}`}>
         
         <div className="container flex justify-between h-20 p-5">
-            <a className="text-xl font-bold text-primary flex items-center" href="#hero">
+            <a className="text-xl font-bold text-primary flex items-center" href="#home">
                 <span className="relative z-10">
                     <span className="text-glow text-foreground">
                         Aditya Ranjan
@@ -33,11 +33,11 @@ function Navbar() {
             </a>
 
             <div className="w-1/3 gap-10 hidden md:flex">
-                <Button href={"#hero"} text={"Home"}/>
+                <Button href={"#home"} text={"Home"}/>
 
                 <Button href={"#about"} text={"About"}/>
 
-                <Button href={"#skills"} text={"Skills"}/>
+                <Button href={"#experience"} text={"Experience"}/>
             
                 <Button href={"#projects"} text={"Projects"}/>
 

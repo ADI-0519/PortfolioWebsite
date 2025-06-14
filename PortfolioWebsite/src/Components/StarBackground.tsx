@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { MdOpacity } from 'react-icons/md'
-import { useSearchParams } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+
 
 //each star has id, size, x, y, opacity, animDur
 

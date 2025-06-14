@@ -2,7 +2,7 @@ import Button from "./button"
 
 function MainPage() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center items-start px-4 gap-5">
+    <section className="relative min-h-screen flex flex-col justify-center items-start px-4 gap-5" id="home">
         <div className="container mx-auto z-10 text-5xl text-foreground font-bold tracking-tight">
             <span className="opacity-0 animate-fade-in">
               Hi, my name is
