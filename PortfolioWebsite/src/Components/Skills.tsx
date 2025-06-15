@@ -18,8 +18,6 @@ function Skills() {
         {name: "OpenCV", level: 95},
         {name: "Vercel", level: 95},
         {name: "VSCode", level: 95},
-
-
     ];
   
     return (

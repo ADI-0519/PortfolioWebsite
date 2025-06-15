@@ -19,7 +19,7 @@ function AboutMe() {
       <div className="flex container flex-wrap justify-center gap-5 mb-12 w-fit bg-secondary/90 rounded-full mx-auto">
         {categories.map((item,key) => (
 
-            <button key={key} onClick={() => setSection(item)} className= {`px-5 py-2 rounded-full transition-all duration-300 capitalize ${activeSection === item ? "bg-primary text-primary-foreground shadow-xl" : "bg-secondary/70 text-foreground hover:bd-secondary"}`}>
+            <button key={key} onClick={() => setSection(item)} className= {`px-5 py-2 rounded-full transition-all duration-300 cursor-pointer capitalize ${activeSection === item ? "bg-primary text-primary-foreground shadow-xl" : "bg-secondary/70 text-foreground hover:bd-secondary"}`}>
               {item}
             </button>
         ))}

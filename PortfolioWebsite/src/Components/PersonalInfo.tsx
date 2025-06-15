@@ -4,7 +4,7 @@ import image from "../assets/image.jpg"
 
 function PersonalInfo() {
   return (
-    <div className="container card-hover gradient-border bg-blend-overlay rounded-2xl h-150 p-10 outline-4">
+    <div className="container card-hover gradient-border bg-blend-overlay rounded-2xl h-150 p-10 outline-4 opacity-0 animate-fade-in-delay-2">
           
           <div className="grid grid-rows-1 h-full grid-cols-[1fr_2fr]">
             <div className="w-full items-center justify-center flex drop-shadow-2xl">
