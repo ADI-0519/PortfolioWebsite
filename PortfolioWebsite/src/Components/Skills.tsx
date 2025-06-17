@@ -15,6 +15,14 @@ import {
   SiJavascript,
   SiOpencv,
   SiVercel,
+  SiTensorflow,
+  SiPytorch,
+  SiScikitlearn,
+  SiPandas,
+  SiDocker,
+  SiGithub,
+  SiJupyter,
+  SiNumpy,
 } from "react-icons/si";
 
 import { DiJava, DiVisualstudio } from "react-icons/di";
@@ -38,6 +46,17 @@ function Skills() {
     { name: "OpenCV", level: 95, icon: <SiOpencv className="w-5 h-5 text-purple-600" /> },
     { name: "Vercel", level: 95, icon: <SiVercel className="w-5 h-5 text-black dark:text-white" /> },
     { name: "VSCode", level: 95, icon: <DiVisualstudio className="w-5 h-5 text-blue-500" /> },
+    { name: "PyTorch", level: 90, icon: <SiPytorch className="w-5 h-5 text-orange-600" /> },
+    { name: "TensorFlow", level: 85, icon: <SiTensorflow className="w-5 h-5 text-orange-500" /> },
+    { name: "Scikit-Learn", level: 90, icon: <SiScikitlearn className="w-5 h-5 text-blue-600" /> },
+    { name: "Pandas", level: 90, icon: <SiPandas className="w-5 h-5 text-black dark:text-white" /> },
+    { name: "NumPy", level: 90, icon: <SiNumpy className="w-5 h-5 text-purple-500" /> },
+    { name: "Docker", level: 80, icon: <SiDocker className="w-5 h-5 text-blue-500" /> },
+    { name: "Jupyter", level: 90, icon: <SiJupyter className="w-5 h-5 text-orange-400" /> },
+    { name: "GitHub", level: 95, icon: <SiGithub className="w-5 h-5 text-black dark:text-white" /> },
+
+
+
   ];
 
     return (
