@@ -1,7 +1,7 @@
 import accessify from "../assets/accessify.jpg"
 import weatherwise from "../assets/weatherwise.jpg"
 import scraper from "../assets/scraper.jpg"
-import { ArrowRight, Github } from "lucide-react"
+import { Github } from "lucide-react"
 import Button from "./button"
 
 

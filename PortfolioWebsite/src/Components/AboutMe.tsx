@@ -1,5 +1,4 @@
-import { Code } from "lucide-react"
-import image from "../assets/image.jpg"
+
 import { useState } from "react"
 import PersonalInfo from "./PersonalInfo";
 import Qualifications from "./Qualifications";
