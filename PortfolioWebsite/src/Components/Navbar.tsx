@@ -9,6 +9,7 @@ function Navbar() {
     
 
     const [isScrolled, setScroll] = useState(false);
+    const [isMenuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -44,6 +45,24 @@ function Navbar() {
                 <Button href={"#contact"} text={"Contact"}/>
             </div>
 
+
+            {/* mobile nav */}
+
+            {/* <div className={`"fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden" ${isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+                <div className="flex flex-col text-xl ">                
+                
+                    <Button href={"#home"} text={"Home"}/>
+
+                    <Button href={"#about"} text={"About"}/>
+
+                    <Button href={"#experience"} text={"Experience"}/>
+                
+                    <Button href={"#projects"} text={"Projects"}/>
+
+                    <Button href={"#contact"} text={"Contact"}/>
+
+                </div>
+            </div> */}
 
 
             

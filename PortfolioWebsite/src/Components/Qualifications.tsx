@@ -34,7 +34,7 @@ function Qualifications() {
   ];
 
   return (
-    <div className="container card-hover gradient-border bg-blend-overlay rounded-2xl shadow-xl h-150 p-10 outline-4 opacity-0 animate-fade-in-delay-1">
+    <div className="container card-hover gradient-border bg-blend-overlay rounded-2xl shadow-xl p-20 outline-4 opacity-0 animate-fade-in-delay-1">
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 container max-w-5xl opacity-0 animate-fade-in-delay-1">
       

@@ -34,7 +34,7 @@ function Experience() {
 
       <div className="relative container mx-auto">
         
-        <div className="absolute left-1/2 transform -translate-x-1 bg-primary h-full w-1" />
+        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 bg-primary h-full w-1" />
 
         <div className="space-y-20">
           {timelineElements.map((exp, idx) => {
@@ -42,13 +42,13 @@ function Experience() {
 
             return (
 
-              <div key={exp.id} className={`relative flex flex-col md:flex-row items-center  ${isLeft ? "md:justify-start" : "md:justify-end"}`}>
+              <div key={exp.id} className={`relative flex flex-col md:flex-row items-center justify-center text-center ${isLeft ? "md:justify-start" : "md:justify-end"}`}>
                 
-                <div className={`z-10 bg-primary text-white rounded-full p-3 shadow-md absolute left-1/2 transform -translate-x-1/2`}>
+                <div className="z-10 bg-primary text-white rounded-full p-3 shadow-md md:absolute md:left-1/2 md:transform md:-translate-x-1/2">
                   <Briefcase className="w-5 h-5" />
                 </div>
                 
-                <div className={`border card-hover gradient-border rounded-2xl shadow-lg p-6 mt-6 outline-4 md:mt-0 md:w-[40%] opacity-0 animate-fade-in-delay-1 ${isLeft ? "md:ml-0" : "md:mr-0"}`}>
+                <div className={`w-full md:w-[40%] border card-hover gradient-border rounded-2xl shadow-lg p-6 mt-6 md:mt-0 opacity-0 animate-fade-in-delay-1 outline-4`}>
 
                   <p className="text-sm text-muted-foreground">{exp.date}</p>
                   <h3 className="text-xl font-semibold text-foreground">{exp.title}</h3>

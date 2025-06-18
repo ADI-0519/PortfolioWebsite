@@ -55,7 +55,7 @@ function Projects() {
             Here are my featured projects, each one carefully crafted with attention to detail, performance, and user experience.
         </p>
 
-        <div className="grid grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((item, key) => (
 
               <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-lg card-hover border flex flex-col">
@@ -74,35 +74,25 @@ function Projects() {
                         ))}
                     </div>
                     
-                    <div className="flex-1">
-                        <span className="text-xl font-bold mb-1 ">{item.title}</span>
-                        <p className="text-xs font-semibold text-secondary ">{item.description}</p>
-                    </div>
-
-
-                    <div className="mt-4 flex justify-between items-center text-foreground/80 hover:text-primary transition-colors duration-100"> 
-                        <a href={item.url}><Github size={20}/></a>
-                    </div>
-
+                <div className="flex-1">
+                  <span className="text-xl font-bold block mb-2">{item.title}</span>
+                  <p className="text-xs font-semibold text-secondary leading-relaxed">{item.description}</p>
                 </div>
 
+                <div className="mt-4 flex justify-between items-center text-foreground/80 hover:text-primary transition-colors duration-100">
+                  <a href={item.url} target="_blank" rel="noopener noreferrer">
+                    <Github size={20} />
+                  </a>
+                </div>
               </div>
-
-
-
-            ))}
+            </div>
+          ))}
         </div>
-
 
         <div className="text-center m-12">
-            <Button href="https://github.com/ADI-0519" type={true} text="Check my Github"/> 
+          <Button href="https://github.com/ADI-0519" type={true} text="Check my Github" />
         </div>
-
       </div>
-
-
-
-
     </section>
   )
 }
