@@ -39,11 +39,11 @@ function PersonalInfo() {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-            <InfoItem icon={<User className="h-6 w-6 text-primary" />} text="Aditya Ranjan" />
-            <InfoItem icon={<Phone className="h-6 w-6 text-primary" />} text="07308466396" />
-            <InfoItem icon={<Mail className="h-6 w-6 text-primary" />} text="adiranjan2019@gmail.com" />
-            <InfoItem icon={<Home className="h-6 w-6 text-primary" />} text="London, UK" />
-            <InfoItem icon={<GraduationCap className="h-6 w-6 text-primary" />} text="BSc (Hons) in AI at King's College London" />
+            <InfoItem icon={<User className="h-5 w-5 text-primary" />} text="Aditya Ranjan" />
+            <InfoItem icon={<Phone className="h-5 w-5 text-primary" />} text="07308466396" />
+            <InfoItem icon={<Mail className="h-5 w-5 text-primary" />} text="adiranjan2019 @gmail.com" />
+            <InfoItem icon={<Home className="h-5 w-5 text-primary" />} text="London, UK" />
+            <InfoItem icon={<GraduationCap className="h-5 w-5 text-primary" />} text="BSc (Hons) in AI at King's College London" />
           </div>
         </div>
       </div>
@@ -58,7 +58,7 @@ function InfoItem({ icon, text }: infoItemProps) {
       <div className="p-3 rounded-full bg-primary/10 w-fit">
         {icon}
       </div>
-      <span className="text-foreground text-glow text-xl text-left md:text-xl sm:text-sm text-wrap">{text}</span>
+      <span className="text-foreground text-xl text-glow text-left md:text-xl sm:text-sm">{text}</span>
     </div>
   );
 }

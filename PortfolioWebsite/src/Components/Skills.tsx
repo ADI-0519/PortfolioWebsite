@@ -60,7 +60,7 @@ function Skills() {
   ];
 
     return (
-    <div className="grid grid-cols-[repeat(auto-fit,minmax(10rem,1fr))] container max-w-5xl gap-6">
+    <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] container max-w-5xl gap-6">
       {skills.map((skill, key) => (
         <div
           key={key}
