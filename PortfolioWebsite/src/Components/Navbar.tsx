@@ -44,7 +44,6 @@ function Navbar() {
 
                     <Button href={"#contact"} text={"Contact"}/>
 
-                    <Toggle />
                 </div>
 
                 
