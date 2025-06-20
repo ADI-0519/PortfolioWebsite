@@ -28,7 +28,7 @@ function Contact() {
         setSubmitted(true);
         setFormData({ name: "", email: "", subject: "", message: "" });
         }, 1500);
-    };
+      };
 
 
   return (

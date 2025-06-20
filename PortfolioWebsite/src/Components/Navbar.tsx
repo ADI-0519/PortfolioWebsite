@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Button from "./button"
 import { Menu, X } from "lucide-react";
-import Toggle from "./toggle";
 
 
 function Navbar() {
@@ -33,7 +32,7 @@ function Navbar() {
 
                 </a>
 
-                <div className="w-1/3 gap-10 hidden md:flex">
+                <div className="w-2/5 gap-8 hidden md:flex">
                     <Button href={"#home"} text={"Home"}/>
 
                     <Button href={"#about"} text={"About"}/>
@@ -41,6 +40,8 @@ function Navbar() {
                     <Button href={"#experience"} text={"Experience"}/>
                 
                     <Button href={"#projects"} text={"Projects"}/>
+
+                    <Button href={"#blog"} text={"Blog"} />
 
                     <Button href={"#contact"} text={"Contact"}/>
 

@@ -1,4 +1,5 @@
 import AboutMe from "../Components/AboutMe"
+import Blog from "../Components/Blog"
 import Contact from "../Components/Contact"
 import Experience from "../Components/Experience"
 import Footer from "../Components/Footer"
@@ -21,9 +22,11 @@ const Home = () => {
 
         <AboutMe />
 
+        <Projects />
+
         <Experience />
 
-        <Projects />
+        <Blog />
 
         <Contact />
 
