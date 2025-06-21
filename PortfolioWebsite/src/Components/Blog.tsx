@@ -11,7 +11,7 @@ function Blog() {
         title: "Nash's Equilibrium",
         description: "A strategic simulation exploring optimal player behavior using game theory principles. Models equilibrium in competitive settings like poker.",
         image: img3,
-        url: "/blog"
+        url: "/BlogPage"
     },
 
     {
@@ -19,7 +19,7 @@ function Blog() {
         title: "The Secretary Problem",
         description: "An interactive demo of the classic optimal stopping dilemma. Implements probabilistic selection to maximize chances of choosing the best option.",
         image: img1,
-        url: "/blog"
+        url: "/BlogPage"
     },
 
     {
@@ -27,7 +27,7 @@ function Blog() {
         title: "Vector Search in Python",
         description: "A prototype search system using vector embeddings for fast semantic lookup. Explores cosine similarity and real-time query ranking.",
         image: img2,
-        url: "/blog"
+        url: "/BlogPage"
     }
 ]
 

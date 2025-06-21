@@ -37,9 +37,9 @@ function Navbar() {
 
                     <Button href={"#about"} text={"About"}/>
 
-                    <Button href={"#experience"} text={"Experience"}/>
-                
                     <Button href={"#projects"} text={"Projects"}/>
+
+                    <Button href={"#experience"} text={"Experience"}/>
 
                     <Button href={"#blog"} text={"Blog"} />
 
@@ -69,11 +69,11 @@ function Navbar() {
                 </div>
 
                 <div onClick={() => {setMenuOpen(false)}}>
-                    <Button href={"#experience"} text={"Experience"}/>
+                    <Button href={"#projects"} text={"Projects"}/>
                 </div>
 
                 <div onClick={() => {setMenuOpen(false)}}>
-                    <Button href={"#projects"} text={"Projects"}/>
+                    <Button href={"#experience"} text={"Experience"}/>
                 </div>
 
                 <div onClick={() => {setMenuOpen(false)}}>
