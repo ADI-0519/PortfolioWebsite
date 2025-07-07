@@ -14,7 +14,7 @@ function BlogPage() {
 
         <Navbar />
 
-        <section className="py-24 px-4 outline-dashed min-h-screen items-center justify-center text-center min-w-screen flex flex-col gap-8">
+        <section className="py-24 px-4 min-h-screen items-center justify-center text-center min-w-screen flex flex-col gap-8">
 
         <div className="text-5xl text-foreground font-bold tracking-tight">Blog</div>
 
@@ -23,7 +23,6 @@ function BlogPage() {
         <div className="text-5xl text-primary font-bold tracking-tight text-glow">
           Coming Soon
         </div>
-
 
 
         <button className="cosmic-button mt-5" onClick={() => navigate("/")}>Back to Home</button>
