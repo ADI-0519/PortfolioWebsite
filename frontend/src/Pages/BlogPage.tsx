@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom"
 import Footer from "../Components/Footer"
 import Navbar from "../Components/Navbar"
 import StarBackground from "../Components/StarBackground"
@@ -6,7 +5,7 @@ import Toggle from "../Components/toggle"
 
 
 import Blogs from "../Components/Blogs";
-import Hello from "../posts/hello.mdx";
+// import Hello from "../posts/hello.mdx";
 import Button from "../Components/button"
 
 
