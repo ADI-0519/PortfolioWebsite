@@ -3,8 +3,9 @@ import Button from "./button"
 import img1 from "../assets/img1.jpg"
 import img2 from "../assets/img2.jpg"
 import img3 from "../assets/img3.jpg"
-
-function Blog() {
+import img4 from "../assets/img4.jpg"
+import img5 from "../assets/img5.jpg"
+function Blogs() {
     const projects = [
     {
         id: 0,
@@ -28,25 +29,33 @@ function Blog() {
         description: "A prototype search system using vector embeddings for fast semantic lookup. Explores cosine similarity and real-time query ranking.",
         image: img2,
         url: "/BlogPage"
+    },
+
+    {
+        id: 3,
+        title: "Understanding and Developing Graph Algorithms in real-life scenarios",
+        description: "Exploring essential graph algorithms such as BFS and DFS through coding exercises, with insights on their applications.",
+        image: img4,
+        url: "/BlogPage"
+    },
+
+    {
+        id: 4,
+        title: "Machine Learning Pipeline: Challenges and Key Takeaways.",
+        description: "An exploration of how data flows through preprocessing, training, and evaluation stages in machine learning projects.",
+        image: img5,
+        url: "/BlogPage"
     }
-]
+
+
+
+
+    
+    ]
 
   return (
-    <section id="blog" className="py-24 px-4 relative">
-      
-
-      <div className="container mx-auto ">
-
-        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center">
-                My <span className="text-primary">Blog</span>
-        </h2>
-
-        <p className="text-center text-muted-foreground mb-12 mx-auto max-w-2xl">
-            Here are some of my recent posts on programming, math, and technical explorations.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((item, key) => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.slice().reverse().map((item, key) => (
 
               <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-lg card-hover border flex flex-col gap-5">
                 <div>
@@ -69,10 +78,7 @@ function Blog() {
             </div>
           ))}
         </div>
-
-      </div>
-    </section>
   )
 }
 
-export default Blog
+export default Blogs

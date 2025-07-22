@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 // type true => padded btn
 interface ButtonProps{
@@ -14,11 +15,12 @@ export default function buttons({href,type,text}:ButtonProps) {
     }
 
     return (
-      <a href={href}>
+      <Link to={href}>
         <div>
           <button className = {`${type ? "cosmic-button" : "text-foreground hover:text-primary font-bold text-xl cursor-pointer transition-all duration-300 rounded-xl" }`} onClick={handleClick}>{text}</button>
         </div>    
-      </a>
+      </Link>
+
     
   )
 }

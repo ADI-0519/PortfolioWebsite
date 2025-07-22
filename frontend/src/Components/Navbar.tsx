@@ -7,6 +7,7 @@ function Navbar() {
 
     const [isScrolled, setScroll] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
+    const isHomePage = location.pathname === "/";
 
     useEffect(() => {
         const handleScroll = () => {
@@ -33,17 +34,17 @@ function Navbar() {
                 </a>
 
                 <div className="w-2/5 gap-8 hidden md:flex">
-                    <Button href={"#home"} text={"Home"}/>
+                    <Button href={"/#home"} text={"Home"}/>
 
-                    <Button href={"#about"} text={"About"}/>
+                    <Button href={"/#about"} text={"About"}/>
 
-                    <Button href={"#projects"} text={"Projects"}/>
+                    <Button href={"/#projects"} text={"Projects"}/>
 
-                    <Button href={"#experience"} text={"Experience"}/>
+                    <Button href={"/#experience"} text={"Experience"}/>
 
-                    <Button href={"#blog"} text={"Blog"} />
+                    <Button href={"/#blog"} text={"Blog"} />
 
-                    <Button href={"#contact"} text={"Contact"}/>
+                    <Button href={"/#contact"} text={"Contact"}/>
 
                 </div>
 
