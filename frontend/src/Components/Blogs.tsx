@@ -12,7 +12,7 @@ function Blogs() {
         title: "Nash's Equilibrium",
         description: "A strategic simulation exploring optimal player behavior using game theory principles. Models equilibrium in competitive settings like poker.",
         image: img3,
-        url: "/BlogPage"
+        url: "/BlogPage/nash-equilibrium"
     },
 
     {
@@ -20,7 +20,7 @@ function Blogs() {
         title: "The Secretary Problem",
         description: "An interactive demo of the classic optimal stopping dilemma. Implements probabilistic selection to maximize chances of choosing the best option.",
         image: img1,
-        url: "/BlogPage"
+        url: "/BlogPage/secretary"
     },
 
     {
@@ -28,7 +28,7 @@ function Blogs() {
         title: "Vector Search in Python",
         description: "A prototype search system using vector embeddings for fast semantic lookup. Explores cosine similarity and real-time query ranking.",
         image: img2,
-        url: "/BlogPage"
+        url: "/BlogPage/vector-search"
     },
 
     {
@@ -36,7 +36,7 @@ function Blogs() {
         title: "Understanding and Developing Graph Algorithms in real-life scenarios",
         description: "Exploring essential graph algorithms such as BFS and DFS through coding exercises, with insights on their applications.",
         image: img6,
-        url: "/BlogPage"
+        url: "/BlogPage/graphs"
     },
 
     {
@@ -44,7 +44,7 @@ function Blogs() {
         title: "Machine Learning Pipelines.",
         description: "An exploration of how data flows through preprocessing, training, and evaluation stages in machine learning projects.",
         image: img7,
-        url: "/BlogPage"
+        url: "/BlogPage/MLPipelines"
     }
 
 

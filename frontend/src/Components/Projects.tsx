@@ -90,7 +90,7 @@ function Projects() {
         </div>
 
         <div className="text-center m-12">
-          <Button href="/ProjectsPage" type={true} text="View my Projects Page" />
+          <Button href="/ProjectsPage" type={true} text="Projects Page" />
         </div>
       </div>
     </section>

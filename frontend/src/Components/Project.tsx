@@ -1,10 +1,12 @@
 import accessify from "../assets/accessify.jpg"
 import weatherwise from "../assets/weatherwise.jpg"
 import scraper from "../assets/scraper.jpg"
+import img4 from "../assets/img4.jpg"
+import img5 from "../assets/img5.jpg"
 import { Github } from "lucide-react"
 
 
-export default function Project() {
+function Project() {
     const projects = [
         {
             id: 0,
@@ -31,8 +33,23 @@ export default function Project() {
             image: weatherwise,
             tags: ["JavaScript","React","PostgreSQL", "NeonDB", "TypeScript"],
             url: "https://github.com/ADI-0519/WeatherWise-web-app"
+        },
+        {
+            id: 3,
+            title: "BatRush",
+            description: "Video game which utilised the module NEAT (Neuroevolution of Augmenting Topologies) in order to create bats which could learn and play against the user.",
+            image: img5,
+            tags: ["Python","SQL","Pygame"],
+            url: "https://github.com/ADI-0519/Bat-Rush-Computing-NEA"
+        },
+        {
+            id: 4,
+            title: "Russo Restaurant POS System",
+            description: "POS system for an italian family based restaurant. Created using windows forms in C#.",
+            image: img4,
+            tags: ["C#","SQL"],
+            url: "https://github.com/ADI-0519/Russo-Restaurant-POS"
         }
-
 
 
     ]
@@ -42,7 +59,7 @@ export default function Project() {
 
               <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-lg card-hover border flex flex-col">
                 <div>
-                    <img src={item.image} className="w-full h-50 object-cover transition-transform duration-400 " />
+                    <img src={item.image} className="w-full h-50 object-cover transition-transform duration-400 m-1" />
                 </div>
 
                 <div className="p-6 flex flex-col flex-1 justify-between">
@@ -72,3 +89,5 @@ export default function Project() {
         </div>
   )
 }
+
+export default Project;
