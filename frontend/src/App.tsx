@@ -4,6 +4,7 @@ import Home from './Pages/Home'
 import NotFound from './Pages/NotFound'
 import BlogPage from './Pages/BlogPage'
 import ScrollToHash from './Components/ScrollToHash'
+import ProjectsPage from './Pages/ProjectsPage'
 //import { Toaster } from "@/components/ui/toaster";
 
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route index element={<Home />} />
           <Route path="/BlogPage" element={<BlogPage />} />
+          <Route path="/ProjectsPage" element={<ProjectsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
     </BrowserRouter>

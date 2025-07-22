@@ -2,10 +2,9 @@ import accessify from "../assets/accessify.jpg"
 import weatherwise from "../assets/weatherwise.jpg"
 import scraper from "../assets/scraper.jpg"
 import { Github } from "lucide-react"
-import Button from "./button"
 
 
-function Projects() {
+export default function Project() {
     const projects = [
         {
             id: 0,
@@ -37,25 +36,8 @@ function Projects() {
 
 
     ]
-
-
-
-
   return (
-    <section id="projects" className="py-24 px-4 relative">
-      
-
-      <div className="container mx-auto ">
-
-        <h2 className="text-3xl md:text-5xl font-bold mb-4 text-center">
-                Featured <span className="text-primary">Projects</span>
-        </h2>
-
-        <p className="text-center text-muted-foreground mb-12 mx-auto max-w-2xl">
-            Here are my featured projects, each one carefully crafted with attention to detail, performance, and user experience.
-        </p>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((item, key) => (
 
               <div key={key} className="group bg-card rounded-lg overflow-hidden shadow-lg card-hover border flex flex-col">
@@ -88,13 +70,5 @@ function Projects() {
             </div>
           ))}
         </div>
-
-        <div className="text-center m-12">
-          <Button href="/ProjectsPage" type={true} text="View my Projects Page" />
-        </div>
-      </div>
-    </section>
   )
 }
-
-export default Projects
