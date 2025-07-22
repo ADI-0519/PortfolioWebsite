@@ -7,7 +7,6 @@ function Navbar() {
 
     const [isScrolled, setScroll] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
-    const isHomePage = location.pathname === "/";
 
     useEffect(() => {
         const handleScroll = () => {

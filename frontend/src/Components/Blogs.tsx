@@ -3,8 +3,8 @@ import Button from "./button"
 import img1 from "../assets/img1.jpg"
 import img2 from "../assets/img2.jpg"
 import img3 from "../assets/img3.jpg"
-import img4 from "../assets/img4.jpg"
-import img5 from "../assets/img5.jpg"
+import img6 from "../assets/img6.jpg"
+import img7 from "../assets/img7.jpg"
 function Blogs() {
     const projects = [
     {
@@ -35,15 +35,15 @@ function Blogs() {
         id: 3,
         title: "Understanding and Developing Graph Algorithms in real-life scenarios",
         description: "Exploring essential graph algorithms such as BFS and DFS through coding exercises, with insights on their applications.",
-        image: img4,
+        image: img6,
         url: "/BlogPage"
     },
 
     {
         id: 4,
-        title: "Machine Learning Pipeline: Challenges and Key Takeaways.",
+        title: "Machine Learning Pipelines.",
         description: "An exploration of how data flows through preprocessing, training, and evaluation stages in machine learning projects.",
-        image: img5,
+        image: img7,
         url: "/BlogPage"
     }
 
