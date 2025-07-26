@@ -1,43 +1,172 @@
----
-title: Nash Equilibrium & Game Theory in “Algorithms to Live By”
----
-
-# Nash Equilibrium & the Minds of Others
-
-From *Algorithms to Live By*’s Game Theory chapter, an idea stuck with me: **even when everyone acts rationally, the outcome isn’t always good** — and often you need to change the rules, not the players.
-
+--- 
+Nash Equilibrium & the Minds of Others
 ---
 
-## 🤔 Nash Equilibrium: Stability Over Perfection
+# Understanding Nash Equilibrium through Game Theory & Algorithms
 
-A **Nash Equilibrium** is a strategy where no one can do better by switching unilaterally. But Christian and Griffiths point out that the equilibrium can be inefficient — a concept called the **price of anarchy**:contentReference[oaicite:5]{index=5}.
+Nash Equilibrium is a central concept in game theory describing a **stable state** where no player benefits by changing their strategy unilaterally. In real life and strategic games, understanding Nash equilibria helps predict outcomes when multiple decision-makers interact.
 
-### Example: Two Shopkeepers
-
-Imagine two local shops choosing whether to open 7 days or take Sunday off. If one stays closed, customers flock to the other → so both stay open 7 days to stay competitive. That’s the equilibrium — where everyone works without rest:contentReference[oaicite:6]{index=6}.
+This post brings together a detailed explanation of mixed-strategy Nash equilibria, examples like Prisoner's Dilemma, Rock-Paper-Scissors, and insights from *Algorithms to Live By* by Brian Christian and Tom Griffiths.
 
 ---
 
-## 🪙 Rock–Paper–Scissors & Matching Pennies
+## Mixed Strategy Nash Equilibrium: When Randomizing is Optimal
 
-I simulated games to see equilibrium in action:
+In some games, pure strategies (always choosing the same option) don’t produce a stable outcome. Instead, players **randomize** their choices to avoid being exploited. This is called a **mixed strategy**.
 
-### rock-paper-scissors
+### Example Setup: Two Strategies (A and B)
+
+Imagine two players each choosing between:
+
+- **Strategy A:** Help someone  
+- **Strategy B:** Refuse to help
+
+The payoffs (money earned) are shown in this matrix — the first number is Player 1’s payoff, the second is Player 2’s.
+
+|           | Player 1: A  | Player 1: B  | 
+|-----------|--------------|--------------|
+| **Player 2: A** | (3, 1)      | (-2, 4)     |
+| **Player 2: B** | (0, 1)      | (2, 1)      |
+
+---
+
+### Step 1: Define Player 1’s Payoffs Depending on Player 2’s Strategy
+
+Let `x = P(Player 2 chooses A)`, so `1 - x = P(Player 2 chooses B)`.
+
+- If Player 1 chooses **A**, expected payoff:
+
+3x + (-2)(1-x) = 5x - 2
+
+- If Player 1 chooses **B**, expected payoff:
+
+0 * x + 2 * (1-x) = 2 - 2x
+
+Player 2 wants to pick \( x \) to minimize Player 1’s payoff.
+
+---
+
+### Step 2: Find Equilibrium Probability \( x \)
+
+Set payoffs equal to find the crossover point:
+
+5x - 2 = 2 - 2x
+7x = 4
+x = 4 / 7
+
+Player 2 should choose **A** with probability \( \frac{4}{7} \) and **B** with probability \( \frac{3}{7} \).
+
+---
+
+### Step 3: Define Player 2’s Payoffs Depending on Player 1’s Strategy
+
+Let `y = P(Player 1 chooses A)`, `1 - y = P(Player 1 chooses B)`.
+
+- If Player 2 chooses **A**, payoff:
+
+1 * y + 4 * (1-y) = 4 - 3y
+
+- If Player 2 chooses **B**, payoff:
+
+1 * y + 1 * (1-y) = 1
+
+---
+
+### Step 4: Find Equilibrium Probability \( y \)
+
+Set payoffs equal:
+
+4 - 3y = 1
+3y = 3
+y = 1
+
+Player 1 should always choose **A**.
+
+---
+
+## The Prisoner's Dilemma: Cooperation vs Defection
+
+The classic Prisoner’s Dilemma highlights how rational players end up in worse outcomes:
+
+|           | Silent (C)   | Betray (D)   |
+|-----------|--------------|--------------|
+| **Silent (C)** | (-1, -1)    | (-3, 0)     |
+| **Betray (D)** | (0, -3)     | (-2, -2)    |
+
+- If both stay silent, both serve 1 year.
+- If one betrays and the other stays silent, the betrayer goes free, the other serves 3 years.
+- If both betray, both serve 2 years.
+
+Players want to minimize their own prison time.
+
+---
+
+### Player A’s Expected Payoffs
+
+Let `x = P(Player B stays silent)`:
+
+- If A stays silent:
+
+(-1) * x + (-3) * (1-x) = 2x - 3
+
+- If A betrays:
+
+0 * x + (-2) * (1-x) = 2x - 2
+
+
+
+Since `2x - 2 > 2x - 3`, betraying is always better. Both end up betraying, serving 2 years each — worse than mutual silence.
+
+---
+
+## From *Algorithms to Live By*: Price of Anarchy and Beyond
+
+Christian and Griffiths show that Nash equilibria aren’t always efficient. The **price of anarchy** measures how selfish decisions hurt the group.
+
+### Two Shopkeepers Example
+
+Two stores deciding whether to open 7 days or close on Sunday: each fears losing customers if closed, so both stay open — no one rests. That’s a Nash equilibrium but suboptimal for well-being.
+
+Changing rules — say, mandating Sunday off or cooperative scheduling — improves outcomes beyond Nash equilibrium.
+
+---
+
+## Rock-Paper-Scissors: Simulating Mixed Strategies in Python
+
+In games like Rock-Paper-Scissors, players randomize to avoid predictability.
 
 ```python
 import random
 
 moves = ["rock", "paper", "scissors"]
-payoffs = {("rock", "rock"): (0, 0), ("rock", "scissors"): (1, -1), ... }
+
+# Payoff matrix: (player1_score, player2_score)
+payoffs = {
+    ("rock", "rock"): (0, 0),
+    ("rock", "paper"): (-1, 1),
+    ("rock", "scissors"): (1, -1),
+    ("paper", "rock"): (1, -1),
+    ("paper", "paper"): (0, 0),
+    ("paper", "scissors"): (-1, 1),
+    ("scissors", "rock"): (-1, 1),
+    ("scissors", "paper"): (1, -1),
+    ("scissors", "scissors"): (0, 0),
+}
 
 def simulate(n=10000):
-    p1 = p2 = 0
+    p1_score = 0
+    p2_score = 0
     for _ in range(n):
-        m1, m2 = random.choice(moves), random.choice(moves)
+        m1 = random.choice(moves)
+        m2 = random.choice(moves)
         s1, s2 = payoffs[(m1, m2)]
-        p1 += s1; p2 += s2
-    return p1, p2
+        p1_score += s1
+        p2_score += s2
+    return p1_score, p2_score
 
-simulate()
+if __name__ == "__main__":
+    p1, p2 = simulate()
+    print(f"Player 1 total score: {p1}")
+    print(f"Player 2 total score: {p2}")
 
 ```

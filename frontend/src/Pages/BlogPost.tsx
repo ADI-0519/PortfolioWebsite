@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom";
 import Secretary from "../posts/secretary.mdx"
 import Nash from "../posts/nash.mdx"
+import Vector from "../posts/vector.mdx"
+import graph from "../posts/graph.mdx"
 import NotFound from "./NotFound";
 import Toggle from "../Components/toggle";
 import Button from "../Components/button";
@@ -22,16 +24,16 @@ function BlogPost() {
         content: Secretary
         },
         'vector-search': {
-        title: 'The Secretary Problem',
-        content: Secretary
+        title: 'Vector Searches',
+        content: Vector
         },
         'graphs': {
-        title: 'The Secretary Problem',
-        content: Secretary
+        title: 'Graphs',
+        content: graph
         },
         'MLPipelines': {
-        title: 'The Secretary Problem',
-        content: Secretary
+        title: 'ML Pipelines',
+        content: graph
         }
   
     };

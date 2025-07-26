@@ -1,0 +1,67 @@
+Exploring Vector Search: Beyond Traditional Keyword Matching
+As a software developer diving into database optimization, I’ve often relied on traditional SQL techniques like indexing or B-tree structures to speed up queries. Searching with keywords like “indexing” or “SQL tuning” usually does the trick. But I started wondering—what if I don’t know the exact keywords or if the content uses different phrases for the same concepts? For example, what if someone talks about “indexing strategies” instead of just “indexing”?
+
+Traditional keyword search feels limited in such cases because it looks for exact matches. That’s when I came across vector search, a technique that promises to go beyond keywords and tap into the meaning behind queries and data.
+
+What Is Vector Search?
+Vector search works by converting your search queries and data into numerical vectors (called embeddings) that capture their semantic meaning. Instead of looking for literal word matches, it compares these vectors using distances like cosine similarity to find items that are meaningfully close to your query.
+
+So, if I searched for “database optimization,” it could also find articles about “SQL tuning” or “indexing strategies” because their embeddings are similar in the semantic space.
+
+Typical Use Cases I Found Interesting
+Similarity Search: Finding similar images, audio, or text by comparing their feature vectors.
+
+Recommendation Systems: Matching users with products or movies based on vector similarities.
+
+Natural Language Processing: Semantic search that understands context.
+
+Question-Answering Systems: Retrieving passages closest to a question vector for accurate answers.
+
+This seemed promising! But then I learned that brute-force vector search—checking distances between the query and every vector—isn’t practical for large datasets due to high computational costs.
+
+Tackling Vector Search Challenges
+Large datasets (millions of vectors) make brute-force searches slow and expensive. Plus, combining vector search with traditional structured queries (like SQL filters) adds complexity.
+
+Thankfully, there are smart indexing techniques like:
+
+HNSW (Hierarchical Navigable Small World graphs): Uses multi-layered graph structures to speed up search.
+
+IVF (Inverted File Index): Clusters vectors and searches only relevant clusters instead of all data.
+
+One tool that caught my attention is MyScale, a vector database combining SQL with a proprietary indexing method (Multi-scale Tree Graph) to maintain speed and accuracy even with complex filtered queries.
+
+
+Getting My Hands Dirty: Simple Vector Similarity in Python
+To understand vector search better, I wrote a tiny Python script that computes cosine similarity between a query vector and some sample document vectors:
+
+```python 
+import numpy as np
+
+def cosine_similarity(vec1, vec2):
+    return np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
+
+# Sample embeddings (say, 3-dimensional for simplicity)
+documents = {
+    "SQL indexing": np.array([0.9, 0.1, 0.2]),
+    "Database tuning": np.array([0.8, 0.3, 0.4]),
+    "Cooking recipe": np.array([0.1, 0.9, 0.7]),
+}
+
+query = np.array([0.85, 0.15, 0.3])  # Embedding for "index optimization"
+
+# Calculate similarity scores
+scores = {doc: cosine_similarity(query, vec) for doc, vec in documents.items()}
+
+# Sort by highest similarity
+results = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+
+for doc, score in results:
+    print(f"Document: {doc}, Similarity: {score:.4f}")
+
+```
+Running this, “SQL indexing” and “Database tuning” score high similarity with my query, while “Cooking recipe” is far less related.
+
+Vector search brings a new dimension to data retrieval—literally. It’s about understanding context and meaning instead of just matching words. While it introduces new challenges in scaling and integration, emerging indexing techniques and tools like MyScale make it increasingly practical.
+
+As data grows more complex and diverse, I’m excited to explore how vector search can improve applications ranging from semantic search engines to AI chatbots.
+
