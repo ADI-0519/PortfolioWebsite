@@ -7,7 +7,7 @@ function Experience() {
       title: "Spring Insight | Nomura",
       location: "London, UK",
       description:
-        "• Presented trade recommendations by analysing commodity price changes, SWF allocations and macroeconomic data.\n• Outperformed peers by presenting an M&A Case Study under CMA oversight.",
+        "• Gained exposure to global markets through case studies and simulations focused on data-driven decision making. \n• Analysed commodity price trends, macroeconomic indicators, and sovereign wealth fund activity to inform trade recommendations.",
       date: "April 2025",
     },
     {

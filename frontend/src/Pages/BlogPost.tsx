@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
-import Hello from "../posts/hello.mdx"
 import Secretary from "../posts/secretary.mdx"
+import Nash from "../posts/nash.mdx"
 import NotFound from "./NotFound";
 import Toggle from "../Components/toggle";
 import Button from "../Components/button";
@@ -15,7 +15,7 @@ function BlogPost() {
         
         'nash-equilibrium': {
         title: 'Nash Equilibrium',
-        content: Hello
+        content: Nash
         },
         'secretary': {
         title: 'The Secretary Problem',
@@ -56,7 +56,7 @@ function BlogPost() {
 
             <div className="text-5xl text-foreground font-bold tracking-tight">{title}</div>
             
-            <div className="text-xl max-w-7xl gradient-border rounded-2xl m-5 p-5 text-left">
+            <div className="text-xl max-w-7xl gradient-border rounded-2xl m-5 p-5 text-left prose prose-invert prose dark:prose-invert">
                 <PostComponent />
             </div>  
 

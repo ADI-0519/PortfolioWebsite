@@ -35,7 +35,8 @@ function PersonalInfo() {
         
         <div className="flex flex-col justify-center gap-6 px-2 md:px-6">
           <p className="text-base md:text-xl font-semibold text-muted-foreground text-center md:text-left leading-relaxed">
-            Hi, I'm Aditya and I am particularly fascinated by the advancements in AI, ML, data science and exploring how we can make a positive impact through innovative solutions. Beyond code, I enjoy playing the guitar, challenging my friends to a game of chess, and nurturing a small vegetable garden in my free time. I am always open to learning, be it new technologies, creative pursuits, or everyday skills.
+            Hi, I'm Aditya, an Artificial Intelligence student at King's College London with a strong interest in machine learning, software engineering, and building systems that make a real-world impact. I'm passionate about using intelligent technologies to improve accessibility, automate decision-making,  or creating intelligent tools that adapt to complex environments. <br></br>
+Outside of tech, I enjoy playing the guitar, playing chess, and tending to my vegetable garden. I'm always curious and open to learning, whether it's a new framework, a creative side project, or something entirely different.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
